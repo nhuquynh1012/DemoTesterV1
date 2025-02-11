@@ -1,0 +1,28 @@
+-git lone ==>lấy thùng chứa .
+-git add :đưa những gì đã làm từ working copy-->staging area.
+-git commit -m tennhanh : đưa những gì đã làm từ staging area--> local repos .
+-git push origin tennhanh:  đưa những gì đã làm từ  local repos --> remote repos .
+
+-git reset tenFile : nếu lỡ add vào mà thấy có lỗi thì dùng lệnh này để file trót về trạng thái chưa add .
+-git rm tenfile : xóa một file nếu lỡ đẩy nó lên thùng chứa sau đó thực hiện git commit -m và git push origin main lại.
+
+-git status : xem trạng thái file đỏ-xanh-vàng.
+
+-git branch : xem những nhánh đã tạo.
+-git branch tennhanh : tạo nhánh với tên tự đặt. 
+-git checkout tennhanh : chuyển nhánh.
+
+-git diff : xem những gì đã sửa.
+
+=============PR Pull request:============== tạo pull request có thể tạo trên git của mình còn nếu xảy ra lỗi thì làm lại ở cục bộ có tác dụng trộn nhánh mình làm vào nhánh chính .
+
+-git pull origin tennhanh : kéo những gì trên nhánh đó xuống máy mình thường được làm khi mỗi sáng vì nếu code được cập nhật thì mình bắt đầu làm từ đó.
+
+-git merge tennhanh ; trộn từ tennhanh với nhánh đáng đứng ví dụ git mẻge main ==> tức là trộn main vào feature-test.
+
+-git stash : tức là đang làm giữa chừng một file mà chưa muốn đẩy nó lên cũng chưa muốn tắt nó nhưng cần chuyển nhánh thì sử dụng lệnh này các file sẽ được lưu tạm vào stash và khi cần thì mở lại dùng tiếp.
+-git stash list : danh sách bộ nhớ tạm 
+-git stash apply tenbonho(tên bộ nhớ được lưu tự động mở danh sách ra xem) : muốn lấy file nào để làm tiếp.
+-git stash apply : lấy tất cả file trong bộ nhớ để làm 
+
+-git checkout tenfile : chuyển một file trở về trạng thái ban đầu nhưng bắt buộc file phải nằm ở working copy(tức là nằm ở trạng thái đầu tiên chưa được add vào)
