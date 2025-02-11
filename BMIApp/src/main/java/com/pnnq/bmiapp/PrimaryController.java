@@ -1,5 +1,6 @@
 package com.pnnq.bmiapp;
 
+import com.pnnq.service.bmiservice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -14,13 +15,13 @@ public class PrimaryController {
     public void tinhCanNang(ActionEvent Evt){
         double h =Double.parseDouble(this.txtHeight.getText());
         double w = Double.parseDouble(this.txtWeight.getText());
-        double bmi = w/Math.pow(h, 2);
+        double b = bmiservice.tinhBmi(h, w);
         String result;
-        if(bmi<18.5){
+        if(b==1){
             result = "Gầy";
             this.lblKetQua.setTextFill(Color.RED);            
         }
-        else if(bmi<25){
+        else if(b==2){
             result = "Bình Thường";
             this.lblKetQua.setTextFill(Color.GREEN);
         }
